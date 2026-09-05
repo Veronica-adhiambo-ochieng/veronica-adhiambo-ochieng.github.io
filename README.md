@@ -1,4 +1,16 @@
 # academic-portfolio-template-lemos
+
+<p align="left">
+
+	<a href="https://ws-dl.blogspot.com/2024/06/2024-06-04-revamp-your-academic.html">
+	  <img src="https://img.shields.io/badge/Blog_Post-Read_More-0077B5?style=flat-square&logo=readme&logoColor=white" alt="Blog Post">
+	</a>
+
+	<a href="https://rochanaro.github.io/template/">
+	  <img src="https://img.shields.io/badge/Live_Demo-Try_it_Now-6f42c1?style=flat-square&logo=rocket&logoColor=white" alt="Live Demo">
+	</a>
+</p>
+
 This repository contains an elegant and responsive academic portfolio template built using HTML, CSS, JavaScript, and Bootstrap. Designed for students, researchers, and academics, this template allows you to showcase your educational background, research projects, publications, and professional accomplishments in a clean and modern layout.
 
 ## Features
