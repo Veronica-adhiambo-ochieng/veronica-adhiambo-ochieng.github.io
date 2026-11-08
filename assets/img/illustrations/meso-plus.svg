@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="t d">
+  <title id="t">MESO+ illustration</title>
+  <desc id="d">A cartoon mother with long curly hair smiling with her eyes closed as she cradles her sleeping baby, with floating hearts and a chat bubble.</desc>
+  <defs>
+    <clipPath id="card"><rect width="320" height="200" rx="18"/></clipPath>
+  </defs>
+  <g clip-path="url(#card)">
+  <rect width="320" height="200" fill="#F6ECF1"/>
+
+  <!-- soft background shapes -->
+  <circle cx="140" cy="118" r="86" fill="#FFF9F5"/>
+  <g fill="#E9D6E0"><circle cx="24" cy="26" r="5"/><circle cx="300" cy="176" r="6"/><circle cx="34" cy="168" r="4"/><circle cx="58" cy="80" r="3"/></g>
+
+  <!-- hair, back layer: long and curly -->
+  <path d="M96 60 C92 30 118 16 140 18 C166 18 186 34 182 64
+           C190 78 184 92 190 104 C196 118 186 128 190 142 C178 150 168 140 160 146
+           L120 146 C110 140 100 150 90 142 C94 128 84 118 90 104 C96 92 88 78 96 60 Z" fill="#2E1F2B"/>
+  <g fill="#2E1F2B">
+    <circle cx="90" cy="112" r="9"/><circle cx="88" cy="132" r="9"/><circle cx="96" cy="146" r="8"/>
+    <circle cx="190" cy="112" r="9"/><circle cx="192" cy="132" r="9"/><circle cx="184" cy="146" r="8"/>
+  </g>
+
+  <!-- neck -->
+  <rect x="131" y="92" width="18" height="20" rx="6" fill="#7C4B36"/>
+
+  <!-- body: plum top with gold neckline -->
+  <path d="M84 200 C84 140 108 112 140 112 C172 112 196 140 196 200 Z" fill="#7A3E65"/>
+  <path d="M126 113 L140 132 L154 113" fill="none" stroke="#D4A23C" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- face -->
+  <ellipse cx="140" cy="68" rx="27" ry="31" fill="#8A5A44"/>
+  <!-- ears and gold hoop earrings -->
+  <ellipse cx="113" cy="72" rx="4" ry="6" fill="#7C4B36"/>
+  <ellipse cx="167" cy="72" rx="4" ry="6" fill="#7C4B36"/>
+  <circle cx="112" cy="84" r="5.5" fill="none" stroke="#D4A23C" stroke-width="2.2"/>
+  <circle cx="168" cy="84" r="5.5" fill="none" stroke="#D4A23C" stroke-width="2.2"/>
+
+  <!-- hair, front: centre part and side curls -->
+  <path d="M113 58 C112 34 128 26 140 30 C152 26 168 34 167 58 C160 44 150 38 140 40 C130 38 120 44 113 58 Z" fill="#2E1F2B"/>
+  <path d="M140 30 L140 40" stroke="#5C2C4C" stroke-width="1.5"/>
+
+  <!-- closed, smiling anime eyes with lashes -->
+  <g fill="none" stroke="#2E1F2B" stroke-width="2.6" stroke-linecap="round">
+    <path d="M122 70 q6 -7 12 0"/>
+    <path d="M146 70 q6 -7 12 0"/>
+    <path d="M122 70 l-3 -2"/><path d="M158 70 l3 -2"/>
+    <path d="M123 59 q5 -3 10 0" stroke-width="2"/>
+    <path d="M147 59 q5 -3 10 0" stroke-width="2"/>
+  </g>
+  <!-- blush, nose, smile -->
+  <ellipse cx="124" cy="80" rx="6" ry="3.5" fill="#E7A9AE" opacity="0.85"/>
+  <ellipse cx="156" cy="80" rx="6" ry="3.5" fill="#E7A9AE" opacity="0.85"/>
+  <path d="M139 76 q1 3 3 2" fill="none" stroke="#5C3A2C" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M132 86 q8 7 16 0" fill="#FFF9F5" stroke="#5C2C4C" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- baby wrapped in a gold blanket -->
+  <ellipse cx="150" cy="156" rx="46" ry="26" fill="#F2D9A0"/>
+  <path d="M110 150 C124 170 170 176 194 156" fill="none" stroke="#D4A23C" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="176" cy="140" r="16" fill="#A86F55"/>
+  <!-- baby hair curl -->
+  <path d="M166 128 C170 120 182 120 186 128 C180 125 172 125 166 128 Z" fill="#2E1F2B"/>
+  <path d="M176 122 c-2 -6 6 -8 6 -3" fill="none" stroke="#2E1F2B" stroke-width="2" stroke-linecap="round"/>
+  <!-- sleeping eyes, blush, tiny mouth -->
+  <g fill="none" stroke="#2E1F2B" stroke-width="2" stroke-linecap="round">
+    <path d="M167 140 q4 3 8 0"/>
+    <path d="M179 140 q4 3 8 0"/>
+  </g>
+  <ellipse cx="168" cy="147" rx="3.5" ry="2" fill="#E7A9AE"/>
+  <ellipse cx="185" cy="147" rx="3.5" ry="2" fill="#E7A9AE"/>
+  <path d="M174 149 q3 2 5 0" fill="none" stroke="#5C2C4C" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- mother's arms cradling the baby -->
+  <path d="M100 150 C110 178 160 186 200 160" fill="none" stroke="#5C2C4C" stroke-width="15" stroke-linecap="round"/>
+  <path d="M196 158 C204 152 206 146 200 142" fill="none" stroke="#8A5A44" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- floating hearts and sparkles -->
+  <path d="M236 52 c0 -10 15 -13 18 -3 c3 -10 18 -7 18 3 c0 12 -18 22 -18 22 c0 0 -18 -10 -18 -22 z" fill="#D4A23C"/>
+  <path d="M212 34 c0 -5 7 -6 8 -1 c1 -5 8 -4 8 1 c0 6 -8 10 -8 10 c0 0 -8 -4 -8 -10 z" fill="#E7A9AE"/>
+  <path d="M286 28 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 z" fill="#D4A23C"/>
+  <path d="M60 46 l2.5 6 l6 2.5 l-6 2.5 l-2.5 6 l-2.5 -6 l-6 -2.5 l6 -2.5 z" fill="#D4A23C"/>
+
+  <!-- chat bubble: support and connection to care -->
+  <path d="M230 104 h56 a10 10 0 0 1 10 10 v24 a10 10 0 0 1 -10 10 h-32 l-12 11 v-11 h-12 a10 10 0 0 1 -10 -10 v-24 a10 10 0 0 1 10 -10 z" fill="#7A3E65"/>
+  <path d="M250 120 c0 -4 6 -5 7 -1 c1 -4 7 -3 7 1 c0 5 -7 9 -7 9 c0 0 -7 -4 -7 -9 z" fill="#FFF9F5"/>
+  <g fill="#FFF9F5"><circle cx="272" cy="124" r="2.5"/><circle cx="280" cy="124" r="2.5"/></g>
+  </g>
+</svg>

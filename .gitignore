@@ -1,0 +1,9 @@
+.DS_Store
+
+# Notes and drafts you want to keep on this computer only. Never uploaded to GitHub.
+private/
+CV_Ocieng_Veronica.pdf
+
+# Reference only (Brittany Chiang's résumé). Never upload.
+resume.pdf
+.claude/

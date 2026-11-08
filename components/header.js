@@ -7,7 +7,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <h1><a class="navbar-brand" href="/">Your Name</a></h1>
+        <h1><a class="navbar-brand" href="/">Veronica Adhiambo Ochieng</a></h1>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,22 +20,22 @@ class Header extends HTMLElement {
               <a class="nav-link" href="/pages/education.html">Education</a>
             </li>
             <li class="nav-item mr-2">
-              <a class="nav-link" href="/pages/experience.html">Experience</a>
+              <a class="nav-link" href="/#experience">Experience</a>
             </li>
             <li class="nav-item mr-2">
               <a class="nav-link" href="/pages/skills.html">Skills</a>
             </li>
             <li class="nav-item mr-2">
-              <a class="nav-link" href="/pages/teaching.html">Teaching</a>
-            </li>
-            <li class="nav-item mr-2">
-              <a class="nav-link" href="/pages/projects.html">Projects</a>
+              <a class="nav-link" href="/#projects">Projects</a>
             </li> 
             <li class="nav-item mr-2">
               <a class="nav-link" href="/pages/publications.html">Publications</a>
             </li>
             <li class="nav-item mr-2">
-              <a class="nav-link" href="/pages/blogposts.html">Blogs</a>
+              <a class="nav-link" href="/pages/blogposts.html">Blog</a>
+            </li>
+            <li class="nav-item mr-2">
+              <a class="nav-link" href="/pages/resume.html">Résumé</a>
             </li>
           </ul>
         </div>

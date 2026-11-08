@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MalReBay | Veronica Adhiambo Ochieng</title>
+    <meta name="description" content="MalReBay is a Bayesian R package that tells malaria treatment failures apart from new infections.">
+    <meta name="author" content="Veronica Adhiambo Ochieng">
+    <link rel="canonical" href="https://veronica-adhiambo-ochieng.github.io/pages/projects/malrebay.html">
+    <meta property="og:title" content="MalReBay | Veronica Adhiambo Ochieng">
+    <meta property="og:site_name" content="Veronica Adhiambo Ochieng">
+    <meta property="og:description" content="MalReBay is a Bayesian R package that tells malaria treatment failures apart from new infections.">
+    <meta property="og:url" content="https://veronica-adhiambo-ochieng.github.io/pages/projects/malrebay.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://veronica-adhiambo-ochieng.github.io/assets/img/veronica-profile.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome651.all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="page-container">
+        <header-component></header-component>
+
+        <main class="container detail">
+            <a class="back-link" href="/#projects">← Back to all projects</a>
+
+            <h1 class="detail-title">MalReBay</h1>
+            <p class="detail-meta">Swiss Tropical and Public Health Institute · Master's thesis 2024 — 2025, Research Assistant 2026 — Present</p>
+
+            <ul class="tags" aria-label="Tools">
+                <li>R</li>
+                <li>Bayesian inference</li>
+                <li>Package development</li>
+                <li>Git and GitHub</li>
+            </ul>
+
+            <img class="detail-art" src="/assets/img/illustrations/malrebay.svg" alt="A DNA double helix with one missing base pair">
+
+            <h2>Overview</h2>
+            <p>MalReBay is an R package that uses parasite genetic data to tell us how well antimalarial drugs are working, so drug resistance can be spotted early. It started as my master's thesis at AIMS Rwanda and I now lead its development at Swiss TPH, with <a href="https://www.swisstph.ch/en/staff/profile/people/monica-golumbeanu" target="_blank" rel="noopener">Dr. Monica Golumbeanu</a>.</p>
+
+            <h2>Why it matters</h2>
+            <p>To catch drug resistance early, we need to know when a malaria drug is failing. In drug trials, the infection sometimes comes back after treatment. Researchers then have to decide: is it the same infection coming back, which means the drug failed (a recrudescence), or a brand-new infection from another mosquito bite? They decide by comparing the parasite's genes before and after treatment.</p>
+
+            <h2>The gap</h2>
+            <p>The method most studies use today is <strong>match counting</strong>: compare a handful of genetic markers and count how many match. It has two problems:</p>
+            <ul>
+                <li><strong>It is sensitive to missing data.</strong> Genotyping often misses some markers, and one missing marker can flip the call.</li>
+                <li><strong>It can't express uncertainty.</strong> It gives a yes or a no, even when the evidence is unclear, for example when a patient carries several parasite strains at once.</li>
+            </ul>
+            <p>When the call is wrong, a drug can look better or worse than it really is. What's missing is a <strong>probabilistic</strong> approach.</p>
+
+            <figure class="compare" aria-label="Match counting compared with MalReBay, using an example">
+                <div class="compare-card">
+                    <p class="compare-label">Match counting</p>
+                    <ul class="markers">
+                        <li><span class="dot dot-match"></span>Marker 1: match</li>
+                        <li><span class="dot dot-match"></span>Marker 2: match</li>
+                        <li><span class="dot dot-missing"></span>Marker 3: missing</li>
+                    </ul>
+                    <p class="compare-result">Answer: <strong>yes or no</strong>. The missing marker can tip it either way, and there's no sense of how sure we are.</p>
+                </div>
+                <div class="compare-card compare-card-new">
+                    <p class="compare-label">MalReBay</p>
+                    <ul class="markers">
+                        <li><span class="dot dot-match"></span>Marker 1: match</li>
+                        <li><span class="dot dot-match"></span>Marker 2: match</li>
+                        <li><span class="dot dot-missing"></span>Marker 3: missing, accounted for</li>
+                    </ul>
+                    <p class="compare-result">Answer: <strong>a probability</strong> that it's the same infection.</p>
+                    <div class="prob-bar" role="img" aria-label="Example: 82 percent likely to be a recrudescence"><span style="width: 82%"></span></div>
+                    <p class="prob-caption">e.g. 82% likely to be a recrudescence</p>
+                </div>
+                <figcaption>An illustrative example, not real data.</figcaption>
+            </figure>
+
+            <h2>What MalReBay does</h2>
+            <p>MalReBay fills that gap with a Bayesian algorithm. It accounts for missing markers and for patients carrying several strains, and instead of a yes or no it estimates the probability that each returning infection is a recrudescence. Those probabilities give more reliable estimates of how well a drug works, and of where resistance may be emerging.</p>
+            <p>It builds on the original Bayesian algorithm developed by <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4576024/" target="_blank" rel="noopener">Dr. Mateusz Plucinski at the US CDC</a>, and turns that idea into a package researchers can install and use.</p>
+
+            <h2>What I did</h2>
+            <ul>
+                <li>Led the design and development of the package, building on my master's thesis.</li>
+                <li>Made the code reproducible and maintainable, and wrote documentation, tutorials and examples.</li>
+                <li>With my supervisor, reviewed existing methods (Aster and PfRecur) and compared them with MalReBay, including how each one copes as more genetic information goes missing.</li>
+                <li>Built an interactive dashboard for exploring MalReBay's results.</li>
+                <li>Review collaborators' code on GitHub before it is merged.</li>
+            </ul>
+
+            <h2>Tools</h2>
+            <ul>
+                <li><strong>R:</strong> the package itself.</li>
+                <li><strong>Bayesian inference:</strong> estimating the probability behind each classification.</li>
+                <li><strong>Git and GitHub:</strong> version control and code review with collaborators.</li>
+            </ul>
+
+            <h2>Where it stands</h2>
+            <ul>
+                <li>The package is publicly available.</li>
+                <li>The comparison with existing methods is ongoing.</li>
+                <li>I'm writing the methods manuscript as first author: Ochieng, V. A., Golumbeanu, M., Plucinski, M. M., and Nsanzabana, C. (2026). <em>A Bayesian algorithm for molecular correction in malaria therapeutic efficacy studies</em>. Manuscript in preparation.</li>
+                <li>I presented the thesis research behind MalReBay at a National Malaria Control Programme capacity-building workshop in Kenya in August 2025.</li>
+            </ul>
+
+            <h2>People I work with</h2>
+            <ul>
+                <li><a href="https://www.swisstph.ch/en/staff/profile/people/monica-golumbeanu" target="_blank" rel="noopener">Dr. Monica Golumbeanu</a>, Swiss Tropical and Public Health Institute: my supervisor, from master's thesis to today.</li>
+                <li>Dr. Mateusz Plucinski, US Centers for Disease Control and Prevention (CDC): developed the original Bayesian algorithm that MalReBay builds on, and is a co-author on the manuscript.</li>
+            </ul>
+
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://swisstph.github.io/MalReBay/" target="_blank" rel="noopener">MalReBay website</a></li>
+                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4576024/" target="_blank" rel="noopener">The original algorithm by Plucinski and colleagues</a></li>
+            </ul>
+        </main>
+
+        <div id="footer">
+            <footer-component></footer-component>
+            <footer-component-lemos></footer-component-lemos>
+        </div>
+    </div>
+
+    <script src="/assets/vendor/jquery/jquery.slim.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/components/site.js" type="text/javascript"></script>
+    <script src="/components/header.js" type="text/javascript"></script>
+    <script src="/components/footer.js" type="text/javascript"></script>
+    <script src="/components/footer-lemos.js" type="text/javascript"></script>
+    <script src="/assets/js/fontawesome651all.min.js" type="text/javascript" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<!--
+    RÉSUMÉ
+    One page, two columns, modelled on Brittany Chiang's résumé.
+    On screen it shows as a sheet of paper. "Save as PDF" opens the print dialog:
+    choose "Save as PDF", A4, margins "None", and turn off "Headers and footers".
+    Styles are in assets/css/resume.css.
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Résumé | Veronica Adhiambo Ochieng</title>
+    <meta name="description" content="Résumé of Veronica Adhiambo Ochieng, mathematical epidemiologist and ML builder.">
+    <meta name="author" content="Veronica Adhiambo Ochieng">
+    <link rel="canonical" href="https://veronica-adhiambo-ochieng.github.io/pages/resume.html">
+    <meta property="og:title" content="Résumé | Veronica Adhiambo Ochieng">
+    <meta property="og:site_name" content="Veronica Adhiambo Ochieng">
+    <meta property="og:description" content="Résumé of Veronica Adhiambo Ochieng, mathematical epidemiologist and ML builder.">
+    <meta property="og:url" content="https://veronica-adhiambo-ochieng.github.io/pages/resume.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://veronica-adhiambo-ochieng.github.io/assets/img/veronica-profile.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/portfolio.css">
+    <link rel="stylesheet" href="/assets/css/resume.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome651.all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="page-container">
+        <header-component></header-component>
+
+        <div class="resume-toolbar">
+            <a class="back-link" href="/#experience">← Back to the site</a>
+            <button type="button" class="resume-print" onclick="window.print()"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Save as PDF</button>
+        </div>
+
+        <article class="resume-sheet">
+
+            <header class="resume-head">
+                <div>
+                    <h1>Veronica Adhiambo Ochieng</h1>
+                    <p class="resume-tagline">Mathematical epidemiologist building models and tools that help health systems act early, from malaria to maternal mental health</p>
+                </div>
+                <p class="resume-contact">
+                    <a href="mailto:veronica.adhiambo.ochieng@gmail.com">veronica.adhiambo.ochieng@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/veronica-adhiambo-ochieng/">linkedin.com/in/veronica-adhiambo-ochieng</a>
+                    <a href="https://github.com/Veronica-adhiambo-ochieng">github.com/Veronica-adhiambo-ochieng</a>
+                    <a href="https://veronica-adhiambo-ochieng.github.io">veronica-adhiambo-ochieng.github.io</a>
+                </p>
+            </header>
+
+            <div class="resume-cols">
+
+                <!-- MAIN COLUMN: one block per organisation, earlier roles listed underneath -->
+                <section class="resume-main" aria-label="Relevant experience">
+                    <h2>Relevant Experience</h2>
+
+                    <div class="r-job">
+                        <p class="r-role">Research Assistant · <strong>Swiss Tropical and Public Health Institute</strong> <span>Jan 2026 — Present</span></p>
+                        <ul>
+                            <li>Design, build, and maintain MalReBay, a Bayesian R package that tells malaria treatment failures apart from new infections, building on my master's thesis</li>
+                            <li>Benchmark MalReBay against Aster and PfRecur as genetic data goes missing, and write the methods manuscript as first author</li>
+                            <li>Write documentation, tutorials, and an interactive dashboard for the package, and review collaborators' code on GitHub</li>
+                            <li>Built the Assumptions tab of the Tanzania Country Dashboard and prepared OpenMalaria outputs and national datasets in R for the National Malaria Control Programme</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-job">
+                        <p class="r-role">Founder &amp; Technical Lead · <strong>MESO+</strong> <span>Mar 2026 — Present</span></p>
+                        <ul>
+                            <li>Build an AI-powered maternal mental health platform that connects mothers with nurses, counsellors, and psychologists, using Flutter, REST APIs, and LLMs</li>
+                            <li>Lead a three-person founding team and external contractors from idea to a working MVP, backed by US$5,000 in initial funding and the AIMS Momentum Incubation Programme</li>
+                            <li>Built clinical partnerships in Kenya and Rwanda and prepare a pilot with about 100 mothers across six health facilities in Kigali</li>
+                            <li>Represent health-tech founders on the Africa Health Collaborative's Young Founders Table</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-job">
+                        <p class="r-role">Research Trainee · <strong>The RNA Institute, University at Albany</strong> <span>Jan — Aug 2026</span></p>
+                        <ul>
+                            <li>Designed and ran an RNA-seq pipeline to study how Deer Tick virus changes human lung cells, using DESeq2, rMATS, and gene ontology analysis</li>
+                            <li>Found that the virus acts mainly through RNA splicing rather than overall gene expression, and presented the results to the Institute</li>
+                        </ul>
+                    </div>
+
+                    <div class="r-job">
+                        <p class="r-role">Data Analyst · <strong>Dalberg Research</strong> <span>Jan 2021 — Aug 2024</span></p>
+                        <p class="r-role">Survey Scripter <span>Feb 2020 — Dec 2020</span></p>
+                        <ul>
+                            <li>Built machine learning models in Keras for voice detection and audio quality checks, making data processing 40% more efficient</li>
+                            <li>Built an OCR and CNN model in TensorFlow that reads nutrition information from images with 84% accuracy</li>
+                            <li>Automated data collection and processing with Python and web scraping, and built dashboards to share research findings</li>
+                            <li>Scripted digital surveys, trained field teams on data quality, and was voted Employee of the Year by colleagues in 2022</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- SIDE COLUMN -->
+                <aside class="resume-side">
+                    <h2>Skills</h2>
+                    <h3>Programming Languages</h3>
+                    <p>R, Python, SQL, Stata</p>
+                    <h3>Methods</h3>
+                    <p>Bayesian inference, MCMC, Monte Carlo simulation, sensitivity analysis, infectious disease modelling, machine learning, RNA-seq analysis</p>
+                    <h3>Libraries &amp; Tools</h3>
+                    <p>Stan, OpenMalaria, R Shiny, Quarto, pandas, NumPy, scikit-learn, TensorFlow, Keras, DESeq2, rMATS, Flutter, Git, GitHub Actions, Docker</p>
+
+                    <h2>Selected Projects</h2>
+                    <h3><a href="https://swisstph.github.io/MalReBay/">MalReBay</a></h3>
+                    <p>Bayesian R package for malaria drug efficacy studies, publicly available for researchers</p>
+                    <h3>MESO+</h3>
+                    <p>AI-powered maternal mental health platform with a working MVP and a pilot planned in Kigali</p>
+
+                    <h2>Education</h2>
+                    <h3>AIMS Rwanda</h3>
+                    <p>MSc in Mathematical Sciences<br>Mathematical Epidemiology<br>Mastercard Foundation Scholar</p>
+                    <h3>Taita Taveta University</h3>
+                    <p>BSc in Statistics</p>
+
+                    <h2>Interests</h2>
+                    <p>Anime, movies, lawn tennis, badminton, ping pong, the occasional fencing bout, and running to unwind</p>
+                </aside>
+            </div>
+        </article>
+
+        <div id="footer">
+            <footer-component></footer-component>
+            <footer-component-lemos></footer-component-lemos>
+        </div>
+    </div>
+
+    <script src="/assets/vendor/jquery/jquery.slim.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/components/site.js" type="text/javascript"></script>
+    <script src="/components/header.js" type="text/javascript"></script>
+    <script src="/components/footer.js" type="text/javascript"></script>
+    <script src="/components/footer-lemos.js" type="text/javascript"></script>
+    <script src="/assets/js/fontawesome651all.min.js" type="text/javascript" defer></script>
+
+</body>
+
+</html>

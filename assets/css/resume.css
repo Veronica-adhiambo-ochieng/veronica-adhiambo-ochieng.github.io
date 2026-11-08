@@ -1,0 +1,193 @@
+/*--------------------------------------------------------------
+# Résumé page: an A4 sheet on screen, one clean page when printed
+--------------------------------------------------------------*/
+
+.resume-toolbar {
+  max-width: 210mm;
+  margin: 2.5rem auto 1rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resume-toolbar .back-link { margin: 0; }
+
+.resume-print {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  background: var(--blue-light);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.resume-print:hover { background: var(--blue-medium); }
+
+.resume-sheet {
+  box-sizing: border-box;
+  width: 210mm;
+  min-height: 297mm;
+  max-width: calc(100% - 2rem);
+  margin: 0 auto 9rem;
+  padding: 13mm 14mm;
+  background: #fff;
+  color: var(--gray-black);
+  border-radius: 6px;
+  box-shadow: 0 14px 40px -24px rgba(46, 31, 43, 0.45);
+  font-size: 9.3pt;
+  line-height: 1.42;
+}
+
+/* header: name and tagline on the left, contact details on the right */
+.resume-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 64mm;
+  gap: 8mm;
+  align-items: start;
+  margin-bottom: 7mm;
+}
+
+.resume-head h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 22.5pt;
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0 0 2.5mm;
+  color: var(--blue-light);
+}
+
+.resume-tagline {
+  font-size: 9.6pt;
+  max-width: 105mm;
+  margin: 0 !important;
+}
+
+.resume-contact {
+  font-size: 8.3pt;
+  margin: 1mm 0 0 !important;
+  line-height: 1.6;
+}
+
+.resume-contact a {
+  display: block;
+  white-space: nowrap;
+  color: var(--gray-black);
+}
+
+/* columns */
+.resume-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 56mm;
+  gap: 8mm;
+}
+
+.resume-sheet h2 {
+  font-size: 12.5pt;
+  font-weight: 600;
+  color: var(--blue-light);
+  margin: 0 0 3.5mm;
+}
+
+.resume-side h2 { margin-top: 7mm; }
+.resume-side h2:first-of-type { margin-top: 0; }
+
+.resume-sheet h3 {
+  font-size: 9.4pt;
+  font-weight: 700;
+  margin: 2.5mm 0 0.4mm;
+  color: var(--gray-black);
+}
+
+.resume-sheet h3 a { color: var(--gray-black); }
+
+.resume-sheet p { margin: 0 0 1.2mm; }
+
+/* jobs: "Role · Organisation  dates", earlier roles underneath */
+.r-job { margin-bottom: 5mm; }
+
+.r-role {
+  font-size: 9.6pt;
+  margin: 0 0 0.6mm !important;
+}
+
+.r-role strong { font-weight: 700; }
+
+.r-role span {
+  margin-left: 1.5mm;
+  font-size: 8.2pt;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.r-job ul {
+  margin: 2mm 0 0;
+  padding-left: 4mm;
+}
+
+.r-job li { margin-bottom: 0.9mm; }
+.r-job li::marker { color: var(--gold); }
+
+/* phones: one column, natural height */
+@media (max-width: 760px) {
+  .resume-sheet {
+    width: auto;
+    min-height: 0;
+    padding: 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .resume-cols { grid-template-columns: minmax(0, 1fr); }
+  .resume-head { grid-template-columns: minmax(0, 1fr); gap: 3mm; }
+}
+
+/* printing: just the sheet, edge to edge on A4 */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  header-component,
+  #footer,
+  .resume-toolbar { display: none !important; }
+
+  body::before,
+  body::after { display: none !important; }
+
+  html, body { background: #fff !important; }
+
+  #page-container { min-height: 0; }
+
+  .resume-sheet {
+    width: 210mm;
+    height: 297mm;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .resume-sheet a { text-decoration: none; }
+
+  * {
+    -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+  }
+}
+
+/* name across the full width; tagline (left) and contact (right) below it */
+.resume-head > div { display: contents; }
+.resume-head h1 { grid-column: 1 / -1; font-size: 25pt; margin-bottom: 0; }
+.resume-head .resume-tagline { grid-column: 1; grid-row: 2; }
+.resume-head .resume-contact { grid-column: 2; grid-row: 2; margin-top: 0 !important; }
+.resume-head { row-gap: 2.5mm; }
+
+@media (max-width: 760px) {
+  .resume-head .resume-contact { grid-column: 1; grid-row: 3; }
+  .resume-head h1 { font-size: 1.9rem; }
+  .resume-contact a { white-space: normal; }
+}

@@ -1,93 +1,39 @@
-# academic-portfolio-template-lemos
+# Veronica Adhiambo Ochieng
 
-<p align="left">
-  <a href="https://ws-dl.blogspot.com/2024/06/2024-06-04-revamp-your-academic.html">
-    <img
-      src="https://img.shields.io/badge/Blog_Post-Read_More-0077B5?style=flat-square&logo=readme&logoColor=white"
-      alt="Blog Post"
-    />
-  </a>
+Personal site of Veronica Adhiambo Ochieng, mathematical epidemiologist and ML builder. I build models and tools that help health systems act early, from malaria to maternal mental health.
 
-  <a href="https://rochanaro.github.io/template/">
-    <img
-      src="https://img.shields.io/badge/Live_Demo-Try_it_Now-6f42c1?style=flat-square&logo=rocket&logoColor=white"
-      alt="Live Demo"
-    />
-  </a>
-</p>
+**Live site:** https://veronica-adhiambo-ochieng.github.io
 
-This repository contains an elegant and responsive academic portfolio template built using HTML, CSS, JavaScript, and Bootstrap. Designed for students, researchers, and academics, this template allows you to showcase your educational background, research projects, publications, and professional accomplishments in a clean and modern layout.
+## What's on the site
 
-## Features
+- **Home**: about me, experience, projects, leadership and engagement, writing
+- **Projects**: [MalReBay](pages/projects/malrebay.html), a Bayesian R package for malaria drug efficacy studies, and [MESO+](pages/projects/meso-plus.html), an AI-powered maternal mental health platform
+- **Experience**: one page per role in `pages/experience/`
+- **Education**, **Skills**, **Publications** and **Blog** pages
+- **Résumé**: a one-page résumé that prints to PDF ([pages/resume.html](pages/resume.html))
 
-- **Responsive Design**: Ensures optimal viewing experience across various devices including desktops, tablets, and smartphones.
-- **Bootstrap Framework**: Utilizes Bootstrap 4 for a robust, mobile-first layout and easy customization.
-- **Modern Aesthetic**: Clean and professional design to highlight your academic achievements.
-- **Interactive Elements**: JavaScript-powered features for enhanced user interaction.
-- **Ease of Customization**: Simple HTML and CSS structure for straightforward customization to fit your personal style and needs.
+## How it's built
 
-## Sections Included
+Plain HTML, CSS and Bootstrap 4. There is no build step, so what's in the files is what gets served.
 
-- **Home**: A welcoming introduction with a brief overview and personal photo.
-- **Education**: A comprehensive list of your educational qualifications.
-- **Experience**: Detail your professional experience including jobs, internships, and volunteer work.
-- **Skills**: Showcase your technical and soft skills.
-- **Teaching**: Highlight your teaching experience and related activities.
-- **Projects**: Showcase your academic and personal projects.
-- **Publications**: Showcase your published papers, articles, and other scholarly work.
-- **Blogs**: Display your blog posts and articles.
+| What | Where |
+|---|---|
+| Homepage | `index.html` |
+| Project and role pages | `pages/projects/`, `pages/experience/` (copy `example-project.html` or `example-role.html` to add one) |
+| Menu and footer | `components/header.js`, `components/footer.js` |
+| Name, email and profile links | `components/site.js` |
+| Colours (plum and gold) | top of `assets/css/main.css` |
+| Layout and page styles | `assets/css/portfolio.css`, `assets/css/resume.css` |
+| Photo and illustrations | `assets/img/` |
 
-## Screenshots
-> ### Homepage
-> <img src="https://raw.githubusercontent.com/rochanaro/academic-portfolio-template-lemos/main/assets/img/screenshots/Homepage.PNG" width="1000"> 
+## Preview locally
 
-> ### Projects
-> <img src="https://raw.githubusercontent.com/rochanaro/academic-portfolio-template-lemos/main/assets/img/screenshots/projects.PNG" width="1000"> 
+From this folder, run the command below, then open http://localhost:8000. Opening the HTML files directly won't work, because all links start at the site root.
 
-> ### Teaching Experience
-> <img src="https://raw.githubusercontent.com/rochanaro/academic-portfolio-template-lemos/main/assets/img/screenshots/Teaching.PNG" width="1000"> 
+```bash
+python3 -m http.server 8000
+```
 
-> ### Skills, Education
-> <img src="https://raw.githubusercontent.com/rochanaro/academic-portfolio-template-lemos/main/assets/img/screenshots/Skills.PNG" width="380"><span style="margin-left:15px"><img src="https://raw.githubusercontent.com/rochanaro/academic-portfolio-template-lemos/main/assets/img/screenshots/Education.PNG" width="380"> 
+## Credits
 
-> ### Blogposts, Publications
-> <img src="https://raw.githubusercontent.com/rochanaro/academic-portfolio-template-lemos/main/assets/img/screenshots/Blogs.PNG" width="380"><span style="margin-left:15px"><img src="https://raw.githubusercontent.com/rochanaro/academic-portfolio-template-lemos/main/assets/img/screenshots/Publications.PNG" width="380"> 
-
-
-## Getting Started
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/rochanaro/academic-portfolio-template-lemos.git
-   ```
-
-1. **Navigate to the Project Directory**
-   ```bash
-   cd academic-portfolio-template-lemos
-   ```
-
-2. **Open `index.html` in Your Browser**
-   - Simply open the `index.html` file in your preferred web browser to see the template in action.
-
-
-## Customization
-To customize the template, edit the HTML (located in `pages`) and CSS (located in `assets`) files in the project directory. You can modify the structure, style, color theme, and content to fit your personal needs. The template is built with Bootstrap 4, so you can utilize Bootstrap's extensive class library for additional customization.
-
-
-### Read More...
-[Blog Post] https://ws-dl.blogspot.com/2024/06/2024-06-04-revamp-your-academic.html 
-
-
-## Updates / Changelog
-
-| Date       | Update/Feature Added                                |
-|------------|-----------------------------------------------------|
-| 2025-09-16 | BibTex button for publications with `copy` option            |
-| 2024-07-19 | Initial release of the template                      |
-
-<br>
-<br>
----
-
-<b>Rochana R. Obadage</b> <br>
-<i>16th September 2025</i>
+Built on the [academic-portfolio-template-lemos](https://github.com/rochanaro/academic-portfolio-template-lemos) template by RochanaRO (MIT licence, see `LICENSE`). Layout and writing style inspired by [Brittany Chiang](https://brittanychiang.com), [Maggie Appleton](https://maggieappleton.com) and [Nadieh Bremer](https://www.visualcinnamon.com). Illustrations were drawn for this site.
