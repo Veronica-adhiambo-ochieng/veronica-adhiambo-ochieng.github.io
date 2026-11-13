@@ -687,3 +687,43 @@ body::after {
 @media (min-width: 992px) {
   .resume-button { display: none; }
 }
+
+/* ---------- skills page ---------- */
+.skill-used { font-size: 0.9rem; opacity: 0.75; margin-top: 0.6rem; }
+
+/* ---------- all projects archive ---------- */
+.detail-wide { max-width: 64rem; }
+
+.archive {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.archive th {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  text-align: left;
+  padding: 0 0.75rem 0.6rem 0;
+  border-bottom: 2px solid var(--plum-tint-strong);
+}
+
+.archive td {
+  vertical-align: top;
+  padding: 1rem 0.75rem 1rem 0;
+  border-bottom: 1px solid var(--plum-tint);
+}
+
+.archive .col-year { opacity: 0.65; white-space: nowrap; }
+.archive .archive-desc { display: block; font-size: 0.85rem; opacity: 0.75; margin-top: 0.2rem; }
+.archive .col-made { white-space: nowrap; }
+.archive .col-links a { display: block; white-space: nowrap; font-weight: 600; }
+.archive-note { margin-top: 1.5rem; }
+
+/* phones and tablets: drop the "made at" and "built with" columns */
+@media (max-width: 767px) {
+  .archive .col-made, .archive .col-built { display: none; }
+}
